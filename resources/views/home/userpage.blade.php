@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  @vite([ "resources/css/app.css","public/scss/app.scss","resources/js/app.js"])
   <title>Document</title>
 </head>
 <body>
@@ -21,7 +22,9 @@
     @endauth
   @endif
  
+<div class='ll'>
+  <h1 >user page(home)</h1>
 
-  <h1>user page(home)</h1>
+</div>
 </body>
 </html>
