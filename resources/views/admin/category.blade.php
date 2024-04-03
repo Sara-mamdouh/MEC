@@ -34,5 +34,30 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
   </div>
+
+  <div>
+    <table>
+      <tr>
+        <td>category name</td>
+        <td>action</td>
+      </tr>
+      @foreach ($categorys as $category)
+      <tr>
+        <td> {{$category->category_name}}</td>
+        <td>         
+          <form action="{{ route("diplomas.destroy",$category->id)}}" method="post" style="display: inline">
+            @csrf
+            @method("delete")
+            <button  class="btn btn-outline-danger">delete</button>
+          </form>
+        </td>
+      </tr>
+     
+      @endforeach
+     
+    </table>
+
+  
+  
 </body>
 </html>

@@ -9,7 +9,8 @@ class AdminController extends Controller
 {
     //
     public function create(){
-        return view("admin.category");
+        $categorys = Category::all();
+        return view("admin.category",["categorys"=>$categorys]);
     }
     public function store(Request $request){
         $diploma =new Category;
@@ -32,4 +33,13 @@ class AdminController extends Controller
 
         return to_route("diplomas.create");
     }
+    
+    public function destroy($categoryID){
+        // dd($categoryID);
+        $category = Category::find($categoryID);
+        // dd($category);
+        $category->delete();
+        return to_route("diplomas.create");
+    }
+
 }

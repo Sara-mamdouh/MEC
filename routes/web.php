@@ -13,7 +13,7 @@ Route::get('/redirect',[HomeController::class,"redirect"])->middleware(['auth', 
 Route::get('/diplomas/create',[AdminController::class,"create"])->name("diplomas.create");
 Route::post('/diplomas',[AdminController::class,"store"])->name("diplomas.store");
 
-
+Route::delete('/diplomas/{diploma}',[AdminController::class,"destroy"])->name("diplomas.destroy");
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
