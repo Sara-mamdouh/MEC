@@ -30,11 +30,16 @@
     <label for="category_image" class="form-label">category image</label>
     <input type="file" class="form-control" id="category_image" name="photo">
   </div>
+  @foreach ($courses as $course)
+  <input type="checkbox" id="{{$course->id}}" name="{{$course->id}}" value="{{$course->name_course}}">
+  <label for="{{$course->id}}">{{$course->name_course}}</label><br>
+  @endforeach
+  
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
   </div>
-
+<hr>
   <div>
     <table>
       <tr>
