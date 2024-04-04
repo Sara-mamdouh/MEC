@@ -8,7 +8,7 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/',[HomeController::class,"index"]);
 
-Route::get('/redirect',[HomeController::class,"redirect"])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/diplomas',[HomeController::class,"redirect"])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/diplomas/create',[AdminController::class,"create"])->name("diplomas.create");
 Route::post('/diplomas',[AdminController::class,"store"])->name("diplomas.store");
