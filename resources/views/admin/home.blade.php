@@ -10,17 +10,17 @@
     <li><a href="{{route('diplomas.create')}}">catigory</a></li>
     {{-- action="{{route('products.index')}}" --}}
     <li>
-      <a href="#ui-basic">product</a>
+      <a href="#ui-basic">courses</a>
       <div id="ui-basic">
         <ul>
-          <li> <a href="">add product</a>
+          <li> <a href="{{route('courses.create')}}">>add course</a>
           </li>
-          <li><a href="">show product</a></li>
+          <li><a href="">show course</a></li>
         </ul>
       </div>
-     
-
     </li>
+    <li><a href="{{route('instructors.create')}}">instractor</a></li>
+
   </ul>
 
 </x-app-layout>

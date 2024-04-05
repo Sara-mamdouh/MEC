@@ -21,8 +21,9 @@ Route::post('/instructors',[InstructorController::class,"store"])->name("instruc
 Route::delete('/instructors/{instructor}',[InstructorController::class,"destroy"])->name("instructors.destroy");
 
 
-
-
+Route::get('/courses/create',[CourseController::class,"create"])->name("courses.create");
+Route::post('/courses',[CourseController::class,"store"])->name("courses.store");
+Route::delete('/courses/{course}',[CourseController::class,"destroy"])->name("courses.destroy");
 
 
 
