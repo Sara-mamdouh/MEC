@@ -26,10 +26,10 @@
     <label for="instructor_experience" class="form-label">experience</label>
     <input type="text" class="form-control" id="instructor_experience" name="experience">
   </div>
-    {{-- <div class="mb-3">
-    <label for="category_image" class="form-label">category image</label>
-    <input type="file" class="form-control" id="category_image" name="photo">
-  </div> --}}
+    <div class="mb-3">
+    <label for="instructor_image" class="form-label">instructor image</label>
+    <input type="file" class="form-control" id="instructor_image" name="photo">
+  </div>
 <select id="" name="category">
   @foreach ($categorys as $category)
 

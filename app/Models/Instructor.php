@@ -12,7 +12,9 @@ class Instructor extends Model
         'instructor_name',
         'job',
         'experience',
-        'category_id'
+        'category_id',
+        'image',
+
 
     ];
     public function category(){

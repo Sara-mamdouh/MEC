@@ -23,6 +23,7 @@ class InstructorController extends Controller
             'job'=>$request->job,
             'experience'=>$request->experience,
             'category_id'=>$request->category,
+            'image'=>$request->file('photo')->store('','public'),
         ]);
 
         return to_route("instructors.create");
