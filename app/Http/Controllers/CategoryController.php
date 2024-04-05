@@ -6,10 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\CategoryCourse;
-
-class AdminController extends Controller
+class CategoryController extends Controller
 {
-    //
     public function create(){
         $categorys = Category::all();
         // $data = Category::find(10);
@@ -70,5 +68,14 @@ class AdminController extends Controller
 
         
     }
-
 }
+
+
+
+
+
+
+    
+    
+
+
