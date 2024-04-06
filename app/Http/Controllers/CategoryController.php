@@ -56,7 +56,29 @@ class CategoryController extends Controller
 
         return to_route("diplomas.create");
     }
-    
+
+    public function edit($categoryId){
+        // dd($categoryId);
+
+    $category = Category::find($categoryId);
+    //    dd($category);
+
+
+      return view("admin.edit_category",["category"=>$category]);
+    }
+
+    public function update($categorytID ,Request $request){
+        // dd($categorytID);
+        $diploma = Category::find($categorytID);
+        $diploma->category_name =$request->name;
+        $diploma->price =$request->price;
+        $diploma->duration =$request->duration;
+        $diploma->image = $request->file('photo')->store('','public');
+
+        $diploma->save();
+        return to_route("diplomas.create");
+
+    }
     public function destroy($categoryID){
         // dd($categoryID);
         $category = Category::find($categoryID);
@@ -65,9 +87,9 @@ class CategoryController extends Controller
 
         $category->delete();
         return to_route("diplomas.create");
-
-        
+ 
     }
+  
 }
 
 

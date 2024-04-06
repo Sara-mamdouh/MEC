@@ -14,7 +14,12 @@ Route::get('/diplomas',[HomeController::class,"redirect"])->middleware(['auth', 
 
 Route::get('/diplomas/create',[CategoryController::class,"create"])->name("diplomas.create");
 Route::post('/diplomas',[CategoryController::class,"store"])->name("diplomas.store");
+Route::get('/diplomas/{diploma}/edit',[CategoryController::class,"edit"])->name("diplomas.edit");
+Route::put('/diplomas/{diploma}',[CategoryController::class,"update"])->name("diplomas.update");
+
 Route::delete('/diplomas/{diploma}',[CategoryController::class,"destroy"])->name("diplomas.destroy");
+
+
 
 Route::get('/instructors/create',[InstructorController::class,"create"])->name("instructors.create");
 Route::post('/instructors',[InstructorController::class,"store"])->name("instructors.store");

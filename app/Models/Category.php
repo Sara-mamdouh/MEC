@@ -15,7 +15,7 @@ class Category extends Model
         'duration',
         'image'
     ];
-   
+
     public function courses(): BelongsToMany
     {
         return $this->belongsToMany(Course::class)->using(CategoryCourse::class);

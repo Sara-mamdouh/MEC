@@ -7,14 +7,15 @@
 
   <h1>hello admin</h1>
   <ul>
-    <li><a href="{{route('diplomas.create')}}">catigory</a></li>
+    <li><a href="{{route('diplomas.create')}}">catigory</a>
+      
+    </li>
     {{-- action="{{route('products.index')}}" --}}
     <li>
       <a href="#ui-basic">courses</a>
       <div id="ui-basic">
         <ul>
-          <li> <a href="{{route('courses.create')}}">>add course</a>
-          </li>
+          <li> <a href="{{route('courses.create')}}">>add course</a></li>
           <li><a href="">show course</a></li>
         </ul>
       </div>
