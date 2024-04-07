@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\CategoryCourse;
+use App\Models\Instructor;
 class CategoryController extends Controller
 {
     public function create(){
@@ -18,7 +19,7 @@ class CategoryController extends Controller
         return view("admin.category",["categorys"=>$categorys,"courses"=>$courses]);
     }
     public function store(Request $request){
-        dd($request->all());
+        // dd($request->all());
     
 
         // $diplomaName=$request->name;
@@ -84,6 +85,10 @@ class CategoryController extends Controller
         $category = Category::find($categoryID);
         // dd($category);
         $category->courses()->detach();
+    
+        // $category->instructors()->delete();
+        Instructor::whereCategoryId($categoryID)->update(['category_id' => null]);
+
 
         $category->delete();
         return to_route("diplomas.create");
