@@ -16,10 +16,9 @@ return new class extends Migration
             $table->string("instructor_name");
             $table->string("job");
             $table->string("experience");
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
-
-            $table->timestamps();
+            $table->string('image')->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');            $table->timestamps();
         });
     }
 

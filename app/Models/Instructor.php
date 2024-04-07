@@ -12,8 +12,8 @@ class Instructor extends Model
         'instructor_name',
         'job',
         'experience',
-        'category_id',
         'image',
+        'category_id',
 
 
     ];
