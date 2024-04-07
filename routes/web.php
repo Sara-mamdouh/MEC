@@ -16,7 +16,6 @@ Route::get('/diplomas/create',[CategoryController::class,"create"])->name("diplo
 Route::post('/diplomas',[CategoryController::class,"store"])->name("diplomas.store");
 Route::get('/diplomas/{diploma}/edit',[CategoryController::class,"edit"])->name("diplomas.edit");
 Route::put('/diplomas/{diploma}',[CategoryController::class,"update"])->name("diplomas.update");
-
 Route::delete('/diplomas/{diploma}',[CategoryController::class,"destroy"])->name("diplomas.destroy");
 
 
@@ -28,6 +27,8 @@ Route::delete('/instructors/{instructor}',[InstructorController::class,"destroy"
 
 Route::get('/courses/create',[CourseController::class,"create"])->name("courses.create");
 Route::post('/courses',[CourseController::class,"store"])->name("courses.store");
+Route::get('/courses/{course}/edit',[CourseController::class,"edit"])->name("courses.edit");
+Route::put('/courses/{course}',[CourseController::class,"update"])->name("courses.update");
 Route::delete('/courses/{course}',[CourseController::class,"destroy"])->name("courses.destroy");
 
 

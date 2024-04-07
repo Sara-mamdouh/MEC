@@ -36,6 +36,10 @@
       @foreach ($courses as $course)
       <tr>
         <td> {{$course->name_course}}</td>
+        <td> {{$course->topics}}</td>
+        <td>
+          <a href="{{ route("courses.edit",$course->id)}}" class="">edit</a>
+        </td>
         <td>         
           <form action="{{ route("courses.destroy",$course->id)}}" method="post" style="display: inline">
             @csrf

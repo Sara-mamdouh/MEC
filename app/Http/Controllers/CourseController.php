@@ -28,10 +28,31 @@ class CourseController extends Controller
 
         return to_route("courses.create");
     }
+    public function edit($courseId){
+        // dd($categoryId);
+
+    $course = Course::find($courseId);
+    //    dd($category);
+
+
+      return view("admin.edit_course",["course"=>$course]);
+    }
+
+    public function update($courseId ,Request $request){
+        // dd($categorytID);
+        $course = Course::find($courseId);
+        $course->name_course =$request->name;
+        $course->topics =$request->topics;
+
+        $course->save();
+        return to_route("courses.create");
+
+    }
     
     public function destroy($courseID){
         $courseID = Course::find($courseID);
         // dd($courseID);
+        $courseID->categories()->detach();
 
         $courseID->delete();
         return to_route("courses.create");
