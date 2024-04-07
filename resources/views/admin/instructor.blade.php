@@ -55,6 +55,9 @@
       <tr>
         <td> {{$instructor->instructor_name}}</td>
         <td> {{$instructor->job}}</td>
+        <td>
+          <a href="{{ route("instructors.edit",$instructor->id)}}" class="">edit</a>
+        </td>
         <td>         
           <form action="{{ route("instructors.destroy",$instructor->id)}}" method="post" style="display: inline">
             @csrf

@@ -30,6 +30,29 @@ class InstructorController extends Controller
 
 
     }
+    public function edit($instructorId){
+        // dd($instructorId);
+
+        $instructor = Instructor::find($instructorId);
+        //    dd($instructor);
+        $categorys = Category::all();
+
+      return view("admin.edit_instructor",["instructor"=>$instructor,"categorys"=>$categorys]);
+    }
+    public function update($instructorId ,Request $request){
+        // dd($instructorId);
+        $instructor = Instructor::find($instructorId);
+        $instructor->instructor_name =$request->name;
+        $instructor->job =$request->job;
+        $instructor->experience =$request->experience;
+        $instructor->category_id = $request->category;
+        $instructor->image = $request->file('photo')->store('','public');
+
+        $instructor->save();
+
+        return to_route("instructors.create");
+
+    }
     public function destroy($instructorID){
         $instructor = Instructor::find($instructorID);
         // dd($instructor);

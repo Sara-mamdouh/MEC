@@ -31,8 +31,8 @@ class CourseController extends Controller
     public function edit($courseId){
         // dd($categoryId);
 
-    $course = Course::find($courseId);
-    //    dd($category);
+        $course = Course::find($courseId);
+        //    dd($category);
 
 
       return view("admin.edit_course",["course"=>$course]);

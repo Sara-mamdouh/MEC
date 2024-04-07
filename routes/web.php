@@ -22,6 +22,8 @@ Route::delete('/diplomas/{diploma}',[CategoryController::class,"destroy"])->name
 
 Route::get('/instructors/create',[InstructorController::class,"create"])->name("instructors.create");
 Route::post('/instructors',[InstructorController::class,"store"])->name("instructors.store");
+Route::get('/instructors/{instructor}/edit',[InstructorController::class,"edit"])->name("instructors.edit");
+Route::put('/instructors/{instructor}',[InstructorController::class,"update"])->name("instructors.update");
 Route::delete('/instructors/{instructor}',[InstructorController::class,"destroy"])->name("instructors.destroy");
 
 
