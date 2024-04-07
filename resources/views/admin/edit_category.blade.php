@@ -15,16 +15,16 @@
 
   <div class="mb-3">
     <label for="category_name" class="form-label">name</label>
-    <input type="text" class="form-control" id="category_name" name="name">
+    <input type="text" class="form-control" id="category_name" name="name" value="{{ $category->category_name}}">
   </div>
  
   <div class="mb-3">
     <label for="category_price" class="form-label">price</label>
-    <input type="text" class="form-control" id="category_price" name="price">
+    <input type="text" class="form-control" id="category_price" name="price" value="{{ $category->price}}">
   </div>
   <div class="mb-3">
     <label for="category_duration" class="form-label">duration</label>
-    <input type="text" class="form-control" id="category_duration" name="duration">
+    <input type="text" class="form-control" id="category_duration" name="duration" value="{{ $category->duration}}">
   </div>
     <div class="mb-3">
     <label for="category_image" class="form-label">category image</label>
