@@ -14,7 +14,8 @@ class Category extends Model
         'category_name',
         'price',
         'duration',
-        'image'
+        'image',
+        'description'
     ];
 
     public function courses(): BelongsToMany
