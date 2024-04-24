@@ -4,68 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>catagory</title>
+  <link rel="stylesheet" href="{{asset("fontawesome-free-6.5.2-web/css/all.min.css")}}">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  @vite(['resources/css/app.css','public/scss/app.scss','resources/js/app.js'])
+  <title>user page</title>
 </head>
 <body>
-  <div>
-    <h1>add category</h1>
-    
-<form action="{{ route('diplomas.store') }}" method="post"  enctype="multipart/form-data">
-  @csrf
-  
-  <div class="mb-3">
-    <label for="category_name" class="form-label">name</label>
-    <input type="text" class="form-control" id="category_name" name="name">
-  </div>
- 
-  <div class="mb-3">
-    <label for="category_price" class="form-label">price</label>
-    <input type="text" class="form-control" id="category_price" name="price">
-  </div>
-  <div class="mb-3">
-    <label for="category_duration" class="form-label">duration</label>
-    <input type="text" class="form-control" id="category_duration" name="duration">
-  </div>
-    <div class="mb-3">
-    <label for="category_image" class="form-label">category image</label>
-    <input type="file" class="form-control" id="category_image" name="photo">
-  </div>
-  @foreach ($courses as $course)
-  <input type="checkbox" id="{{$course->id}}" name="{{$course->id}}" value="{{$course->name_course}}">
-  <label for="{{$course->id}}">{{$course->name_course}}</label><br>
-  @endforeach
-  
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-  </div>
-<hr>
-  <div>
-    <table>
-      <tr>
-        <td>category name</td>
-        <td>action</td>
-      </tr>
-      @foreach ($categorys as $category)
-      <tr>
-        <td> {{$category->category_name}}</td>
-        <td>         
-          <form action="{{ route("diplomas.destroy",$category->id)}}" method="post" style="display: inline">
-            @csrf
-            @method("delete")
-            <button  class="btn btn-outline-danger">delete</button>
-          </form>
-        </td>
-        <td>
-          <a href="{{ route("diplomas.edit",$category->id)}}" class="">edit</a>
-        </td>
-      </tr>
-      @endforeach
-    </table>
-    
+@include("partials.adminpage._sidebar")
+@include("partials.adminpage._addCategory")
+
+@include("partials.adminpage._showCategory")
 
 
-  
-  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="{{asset("js/main.js")}}"></script>
+
 </body>
 </html>
