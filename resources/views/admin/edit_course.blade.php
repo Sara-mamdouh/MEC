@@ -4,30 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>edit-course</title>
+  <link rel="stylesheet" href="{{asset("fontawesome-free-6.5.2-web/css/all.min.css")}}">
+  @vite(['resources/css/app.css','public/scss/app.scss','resources/js/app.js'])
+  <title>user page</title>
 </head>
 <body>
-  <div>
-    <h1>edit course</h1>
-<form action="{{route("courses.update",$course->id)}}" method="post" >
-  @csrf
-  @method("put")
 
-  <div class="mb-3">
-    <label for="course_name" class="form-label">name</label>
-    <input type="text" class="form-control" id="course_name" name="name" value="{{ $course->name_course}}">
-  </div>
- 
-  <div class="mb-3">
-    <label for="course_topics" class="form-label">topics</label>
-    <input type="text" class="form-control" id="course_topics" name="topics" value="{{ $course->topics}}">
-  </div>
- 
+@include("partials.adminpage._sidebar")
 
-  
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-  </div>
+@include("partials.adminpage._editCourses")
+
+
+
+
+<script src="{{asset("js/main.js")}}"></script>
+
 </body>
 </html>

@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Models;
+// use Illuminate\Database\Eloquent\Relations\Pivot;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\belongsToMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
@@ -20,11 +21,15 @@ class Category extends Model
 
     public function courses(): BelongsToMany
     {
-        return $this->belongsToMany(Course::class)->using(CategoryCourse::class);
+        return $this->belongsToMany(Course::class);
     }
     public function instructors(): HasMany
     {
         return $this->hasMany(Instructor::class);
+    }
+    public function users(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class ,"carts");
     }
     
 }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
 class CategoryCourse extends Model
 {
@@ -14,4 +15,10 @@ class CategoryCourse extends Model
         
     ];
     protected $table='category_course';
+    /**
+ * Indicates if the IDs are auto-incrementing.
+ *
+ * @var bool
+ */
+   public $incrementing = true;
 }

@@ -46,7 +46,9 @@ class InstructorController extends Controller
         $instructor->job =$request->job;
         $instructor->experience =$request->experience;
         $instructor->category_id = $request->category;
-        $instructor->image = $request->file('photo')->store('','public');
+        if($request->file('photo') !=null){
+            $instructor->image = $request->file('photo')->store('','public');
+        }
 
         $instructor->save();
 
