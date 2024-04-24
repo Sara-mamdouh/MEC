@@ -4,73 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>instructor</title>
+  <link rel="stylesheet" href="{{asset("fontawesome-free-6.5.2-web/css/all.min.css")}}">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  @vite(['resources/css/app.css','public/scss/app.scss','resources/js/app.js'])
+  <title>user page</title>
 </head>
 <body>
-  <div>
-    <h1>add instrutor</h1>
-    
-<form action="{{route('instructors.store') }}" method="post"  enctype="multipart/form-data">
-  @csrf
-  
-  <div class="mb-3">
-    <label for="instructor_name" class="form-label">name</label>
-    <input type="text" class="form-control" id="instructor_name" name="name">
-  </div>
- 
-  <div class="mb-3">
-    <label for="instructor_job" class="form-label">job</label>
-    <input type="text" class="form-control" id="instructor_job" name="job">
-  </div>
-  <div class="mb-3">
-    <label for="instructor_experience" class="form-label">experience</label>
-    <input type="text" class="form-control" id="instructor_experience" name="experience">
-  </div>
-    <div class="mb-3">
-    <label for="instructor_image" class="form-label">instructor image</label>
-    <input type="file" class="form-control" id="instructor_image" name="photo">
-  </div>
-<select id="" name="category">
-  @foreach ($categorys as $category)
+@include("partials.adminpage._sidebar")
+@include("partials.adminpage._addInstructor")
 
-  <option value="{{$category->id}}">
-    {{$category->category_name}}
-  </option>
-  @endforeach
+@include("partials.adminpage._showInstructor")
 
-</select>
-  
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-  </div>
-<hr>
-  <div>
-    <table>
-      <tr>
-        <td>instructors name</td>
-        <td>jop</td>
-      </tr>
-      @foreach ($instructors as $instructor)
-      <tr>
-        <td> {{$instructor->instructor_name}}</td>
-        <td> {{$instructor->job}}</td>
-        <td>
-          <a href="{{ route("instructors.edit",$instructor->id)}}" class="">edit</a>
-        </td>
-        <td>         
-          <form action="{{ route("instructors.destroy",$instructor->id)}}" method="post" style="display: inline">
-            @csrf
-            @method("delete")
-            <button  class="btn btn-outline-danger">delete</button>
-          </form>
-        </td>
-      </tr>
-      @endforeach
-     
-    </table>
 
-  </div>
-  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="{{asset("js/main.js")}}"></script>
+
 </body>
 </html>

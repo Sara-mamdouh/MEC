@@ -1,28 +1,29 @@
-<x-app-layout>
-  <x-slot name="header">
-      <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-          {{ __('Dashboard') }}
-      </h2>
-  </x-slot>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{asset("fontawesome-free-6.5.2-web/css/all.min.css")}}">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+ 
 
-  <h1>hello admin</h1>
-  <ul>
-    <li><a href="{{route('diplomas.create')}}">catigory</a>
-      
-    </li>
-    {{-- action="{{route('products.index')}}" --}}
-    <li>
-      <a href="#ui-basic">courses</a>
-      <div id="ui-basic">
-        <ul>
-          <li> <a href="{{route('courses.create')}}">>add course</a></li>
-          <li><a href="">show course</a></li>
-        </ul>
-      </div>
-    </li>
-    <li><a href="{{route('instructors.create')}}">instractor</a></li>
 
-  </ul>
+  @vite(['resources/css/app.css','public/scss/app.scss','resources/js/app.js'])
+  <title>user page</title>
+</head>
+<body>
+@include("partials.adminpage._sidebar")
 
-</x-app-layout>
 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<script src="{{asset("js/main.js")}}"></script>
+
+</body>
+</html>

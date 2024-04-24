@@ -45,4 +45,8 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany(Category::class,"carts");
+    }
 }

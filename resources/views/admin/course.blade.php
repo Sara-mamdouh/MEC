@@ -4,55 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>course</title>
+  <link rel="stylesheet" href="{{asset("fontawesome-free-6.5.2-web/css/all.min.css")}}">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  @vite(['resources/css/app.css','public/scss/app.scss','resources/js/app.js'])
+  <title>user page</title>
 </head>
 <body>
-  <div>
-    <h1>add course</h1>
-    <form action="{{ route('courses.store') }}" method="post">
-      @csrf
+@include("partials.adminpage._sidebar")
+@include("partials.adminpage._addCourses")
 
-      <div class="mb-3">
-        <label for="courses_name" class="form-label">name</label>
-        <input type="text" class="form-control" id="courses_name" name="name">
-      </div>
-     
-      <div class="mb-3">
-        <label for="courses_topics" class="form-label">topics</label>
-        <input type="text" class="form-control" id="courses_topics" name="topics">
-      </div>
-      
-      
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    
-<hr>
+@include("partials.adminpage._showCourses")
 
-  <div>
-    <table>
-      <tr>
-        <td>corse name</td>
-      </tr>
-      @foreach ($courses as $course)
-      <tr>
-        <td> {{$course->name_course}}</td>
-        <td> {{$course->topics}}</td>
-        <td>
-          <a href="{{ route("courses.edit",$course->id)}}" class="">edit</a>
-        </td>
-        <td>         
-          <form action="{{ route("courses.destroy",$course->id)}}" method="post" style="display: inline">
-            @csrf
-            @method("delete")
-            <button  class="btn btn-outline-danger">delete</button>
-          </form>
-        </td>
-      </tr>
-      @endforeach
-     
-    </table>
 
-  </div>
-  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script src="{{asset("js/main.js")}}"></script>
+
 </body>
 </html>

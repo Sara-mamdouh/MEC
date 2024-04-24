@@ -6,11 +6,17 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InstructorController;
+// use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 
-Route::get('/',[HomeController::class,"index"]);
+Route::get('/',[HomeController::class,"index"])->name("mainhome");
+Route::get('/about',[HomeController::class,"about"])->name("about");
 
-Route::get('/diplomas',[HomeController::class,"redirect"])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/user',[HomeController::class,"redirect"])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/user/{diploma}',[HomeController::class,"add_cart"])->name('add_cart');
+Route::get('/user/show_cart',[HomeController::class,"show_cart"])->name('show_cart');
+Route::delete('/user/remove_cart/{diploma}',[HomeController::class,"remove_cart"])->name('remove_cart');
+Route::get('/user/cash_booking',[HomeController::class,"cash_booking"])->name('cash_booking');
 
 Route::get('/diplomas/create',[CategoryController::class,"create"])->name("diplomas.create");
 Route::post('/diplomas',[CategoryController::class,"store"])->name("diplomas.store");
@@ -33,6 +39,7 @@ Route::get('/courses/{course}/edit',[CourseController::class,"edit"])->name("cou
 Route::put('/courses/{course}',[CourseController::class,"update"])->name("courses.update");
 Route::delete('/courses/{course}',[CourseController::class,"destroy"])->name("courses.destroy");
 
+Route::get('/diplomas/{diploma}',[HomeController::class,"show"])->name("diplomas.show");
 
 
 
