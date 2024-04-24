@@ -48,7 +48,7 @@
         <li><span>{{$category->description}}</span></li>
 
       </ul>
-      <form method="POST" action="{{route("add_card",$category->id)}}">
+      <form method="POST" action="{{route("add_cart",$category->id)}}">
         @csrf
       <input class="card__body__link" type="submit" value="Book now">
     </div>

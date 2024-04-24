@@ -8,7 +8,7 @@
         <label for="category_name" class="form-label">name</label>
         <input type="text" class="input-control" id="category_name" name="name" value="{{ $category->category_name}}">
       </div>
-    
+
       <div class="input-field">
         <label for="category_price" class="form-label">price</label>
         <input type="text" class="input-control" id="category_price" name="price" value="{{ $category->price}}">
@@ -35,7 +35,7 @@
         @endforeach
       </div>
 
-      
+
 
       <div class="input-field">
         <textarea name="description" class="textarea-field " rows="10" placeholder="Enter your description" pattern="[a-zA-Z]{2}[a-zA-Z\s]*" required="" id="description" >{{$category->description}}</textarea>
@@ -47,6 +47,3 @@
     </form>
   </div>
 </section>
-
-    
-
