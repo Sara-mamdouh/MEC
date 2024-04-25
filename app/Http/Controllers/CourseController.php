@@ -12,7 +12,7 @@ class CourseController extends Controller
 {
     //
     public function create(){
-        $Courses = Course::all();
+        $Courses = Course::latest()->paginate(6);
       
         return view("admin.course",["courses"=>$Courses]);
     }

@@ -16,7 +16,7 @@ use App\Models\Cart;
 class CategoryController extends Controller
 {
     public function create(){
-        $categorys = Category::all();
+        $categorys = Category::latest()->paginate(6);
 
         $courses=Course::all();
         // $category =Category::find(30);

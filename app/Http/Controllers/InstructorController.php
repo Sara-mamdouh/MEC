@@ -12,7 +12,7 @@ class InstructorController extends Controller
 {
     //
     public function create(){
-        $Instructors=Instructor::all();
+        $Instructors=Instructor::latest()->paginate(6);
         $categorys = Category::all();
         return view("admin.instructor",["instructors"=>$Instructors,"categorys"=>$categorys]);
     }

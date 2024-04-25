@@ -54,7 +54,9 @@
       
     </table>
   </div>
- 
+  <div style="padding: 40px">
+    {{$instructors->links()}}
+  </div>
 </section>
 
 

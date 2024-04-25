@@ -45,7 +45,9 @@
       
     </table>
   </div>
- 
+  <div style="padding: 40px">
+    {{$courses->links()}}
+  </div>
 </section>
 
 

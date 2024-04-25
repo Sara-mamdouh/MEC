@@ -56,7 +56,9 @@
       
     </table>
   </div>
- 
+  <div style="padding: 40px">
+    {{$categorys->links()}}
+  </div>
 </section>
 
 
