@@ -1,10 +1,10 @@
 //////////////////////////////////////////////////// navbar for userpage
-if (document.querySelector(".navbar")) {
+if (document.querySelector(".navb")) {
     const menu = document.querySelector("#menu-bar");
     const nav = document.querySelector("#nav-list");
 
     menu.onclick = () => {
-        nav.classList.toggle("navbar-collapse");
+        nav.classList.toggle("navb-collapse");
     };
 }
 ////////////////////////////////////////////////////////////// slider hero section
@@ -68,28 +68,7 @@ if (document.querySelector(".instructors__carousel")) {
     });
 }
 
-////////////////////////
-
-if (document.querySelector(".carousel")) {
-    /////////////////////////////
-    // const carouselInstructors = document.querySelector(
-    //     ".carousel__instructors"
-    // );
-    // const arrowBtn = document.querySelectorAll(".wrapper__arrow");
-    // const cardInstructorWidth =
-    //     carouselInstructors.querySelector(".instructors__card").offsetWidth +
-    //     18;
-    // arrowBtn.forEach((arrow) => {
-    //     arrow.addEventListener("click", () => {
-    //         carouselInstructors.scrollLeft +=
-    //             arrow.id === "left-arrow"
-    //                 ? -cardInstructorWidth
-    //                 : cardInstructorWidth;
-    //     });
-    // });
-    //////////////////////////////////////
-}
-///////////////////////
+//////////////////////// about
 if (document.querySelector(".faq")) {
     const head = document.querySelectorAll(".accordion-item__header");
     // const accordionBody = document.querySelector(".accordion-item__body");
@@ -110,21 +89,43 @@ if (document.querySelector(".faq")) {
 
     console.log("ffff");
 }
-
-////////////////
+///////////////////////////////////////////////////////// aside
 if (document.querySelector(".tooltip")) {
     let btn = document.querySelector("#bars");
     let sidebar = document.querySelector(".sidebar");
     btn.onclick = function () {
         sidebar.classList.toggle("unActiveSide");
     };
-    /////
-    // var modal = document.querySelector(".modal");
-
-    // // When the user clicks anywhere outside of the modal, close it
-    // window.onclick = function (event) {
-    //     if (event.target == modal) {
-    //         modal.style.display = "none";
-    //     }
-    // };
 }
+// if (document.querySelector(".carousel")) {
+//     /////////////////////////////
+//     // const carouselInstructors = document.querySelector(
+//     //     ".carousel__instructors"
+//     // );
+//     // const arrowBtn = document.querySelectorAll(".wrapper__arrow");
+//     // const cardInstructorWidth =
+//     //     carouselInstructors.querySelector(".instructors__card").offsetWidth +
+//     //     18;
+//     // arrowBtn.forEach((arrow) => {
+//     //     arrow.addEventListener("click", () => {
+//     //         carouselInstructors.scrollLeft +=
+//     //             arrow.id === "left-arrow"
+//     //                 ? -cardInstructorWidth
+//     //                 : cardInstructorWidth;
+//     //     });
+//     // });
+//     //////////////////////////////////////
+// }
+///////////////////////
+
+////////////////
+
+/////
+// var modal = document.querySelector(".modal");
+
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function (event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// };
