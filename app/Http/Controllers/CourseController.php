@@ -28,7 +28,7 @@ class CourseController extends Controller
         );
      
 
-        return to_route("courses.create");
+        return to_route("courses.create")->with("requestStatus","course create successfully");
     }
     public function edit($courseId){
         // dd($categoryId);
@@ -47,7 +47,7 @@ class CourseController extends Controller
         $course->topics =$request->topics;
 
         $course->save();
-        return to_route("courses.create");
+        return to_route("courses.create")->with("requestStatus","course update successfully");
 
     }
     

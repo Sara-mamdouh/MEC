@@ -1,4 +1,11 @@
 <section class="admin-container">
+  @if(session()->has("requestStatus"))
+  <div x-data="{ open: true }" x-init="setTimeout( () => open = false,3000)"> 
+     <div x-show="open" class="alert alert-success">
+        {{ session('requestStatus')}}  
+    </div> 
+  </div>
+  @endif
   <div class="category-form ">
     <h1><span>add</span> course</h1>
     <form action="{{ route('courses.store') }}" method="post" >
