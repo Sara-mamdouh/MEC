@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreCategoryRequest;
+
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\CategoryCourse;
@@ -26,10 +27,11 @@ class CategoryController extends Controller
         
         return view("admin.category",["categorys"=>$categorys,"courses"=>$courses]);
     }
-    public function store(Request $request){
-    
+    public function store(StoreCategoryRequest $request){
+
         $diploma = new Category();
         // dd($request);
+   
 
         $diploma->category_name =$request->name;
         $diploma->price =$request->price;
@@ -74,7 +76,7 @@ class CategoryController extends Controller
       return view("admin.edit_category",["category"=>$category,"courses"=>$courses]);
     }
 
-    public function update($categorytID ,Request $request){
+    public function update($categorytID ,StoreCategoryRequest $request){
         // dd($categorytID);
 
         $diploma = Category::find($categorytID);
