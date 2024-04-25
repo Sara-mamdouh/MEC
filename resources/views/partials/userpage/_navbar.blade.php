@@ -16,7 +16,7 @@
           <a class="nav-list__link" href="#services">Services</a>
         </li>
         <li class="nav-list__item">
-          <a class="nav-list__link" aria-current="page" href="#">gallery</a>
+          <a class="nav-list__link" aria-current="page" href="#gallery">gallery</a>
         </li>
         <li class="nav-list__item">
           <a class="nav-list__link" href="{{ route('show_cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
