@@ -996,16 +996,6 @@ input[type="checkbox"] {
     & tr:not(:last-child) {
         border-bottom: 1px solid #919191;
     }
-    // & tr {
-    //     & td:not(:first-child):not(:last-child) {
-    //         display: none;
-    //     }
-    // }
-    // & tr {
-    //     & th:not(:first-child):not(:last-child) {
-    //         display: none;
-    //     }
-    // }
 }
 
 td {
@@ -1013,6 +1003,14 @@ td {
     text-align: center;
     color: #565857;
     /* border-right: 1px solid #565857; */
+}
+.action {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    // align-content: space-around;
+
+    // align-content: center;
 }
 /////////////////////////////////////////////////////////////////////
 
