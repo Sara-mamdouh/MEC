@@ -27,7 +27,7 @@ class InstructorController extends Controller
             'image'=>$request->file('photo')->store('','public'),
         ]);
 
-        return to_route("instructors.create");
+        return to_route("instructors.create")->with("requestStatus","category created successfully");
 
 
     }
@@ -53,7 +53,7 @@ class InstructorController extends Controller
 
         $instructor->save();
 
-        return to_route("instructors.create");
+        return to_route("instructors.create")->with("requestStatus","category updated successfully");
 
     }
     public function destroy($instructorID){
