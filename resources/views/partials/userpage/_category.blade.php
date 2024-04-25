@@ -7,7 +7,7 @@
       @foreach ( $categorys as $category)
       <div class="card" >
         <div class="card__img">
-          <img src="{{asset("storage/{$category->image}")}}" alt="" />
+          <img src="{{asset("{$category->image}")}}" alt="" />
           <div class="card__img__overlay">
             <form method="POST" action="{{route("add_cart",$category->id)}}">
               @csrf

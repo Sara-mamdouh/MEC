@@ -18,14 +18,14 @@
         <td> {{$category->category_name}}</td>
           <td> {{$category->price}}</td>
         <td> {{$category->duration}}</td>
-        <td> <img src="{{asset("storage/{$category->image}")}}" alt="" /></td>
+        <td> <img src="{{asset("{$category->image}")}}" alt="" /></td>
         <td> 
           @foreach($category->courses as $course)
           <span>{{ $course->name_course }} /</span>
           @endforeach
 
         </td>
-        <td>         
+        <td class="action">         
           <button  type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{$category->id}}">delete</button>
 
           <a href="{{ route("diplomas.edit",$category->id)}}" class="btn btn-outline-success">edit</a>
