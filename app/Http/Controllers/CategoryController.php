@@ -55,13 +55,7 @@ class CategoryController extends Controller
             );
         }
            
-        
-        
-           
-
-        // return to_route("products.index")->with("requestStatus","product created successfuly");
-
-        return to_route("diplomas.create");
+        return to_route("diplomas.create")->with("requestStatus","category create successfully");
     }
    
 
@@ -101,7 +95,7 @@ class CategoryController extends Controller
             ]
             );
         }
-        return to_route("diplomas.create");
+        return to_route("diplomas.create")->with("requestStatus","category update successfully");
 
     }
     public function destroy($categoryID){
