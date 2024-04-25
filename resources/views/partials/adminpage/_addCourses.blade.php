@@ -7,11 +7,20 @@
         <label for="courses_name" class="form-label">name</label>
         <input type="text" class="input-control" id="courses_name" name="name">
       </div>
-    
+      @error("name")
+      <div class="alert error-mess">
+        {{ $message }}    
+      </div>        
+      @enderror
       <div class="input-field">
         <label for="courses_topics" class="form-label">topics</label>
         <input type="text" class="input-control" id="courses_topics" name="topics">
       </div>
+      @error("topics")
+      <div class="alert error-mess">
+        {{ $message }}    
+      </div>        
+      @enderror
     
 
       <div class="btn-submit">       

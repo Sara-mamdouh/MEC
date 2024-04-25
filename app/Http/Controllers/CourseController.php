@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Course;
 use App\Models\CategoryCourse;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreCourseRequest;
 
 
 class CourseController extends Controller
@@ -15,7 +16,7 @@ class CourseController extends Controller
       
         return view("admin.course",["courses"=>$Courses]);
     }
-    public function store(Request $request){
+    public function store(StoreCourseRequest $request){
         // dd($request->all());
     
         Course::create(
@@ -39,7 +40,7 @@ class CourseController extends Controller
       return view("admin.edit_course",["course"=>$course]);
     }
 
-    public function update($courseId ,Request $request){
+    public function update($courseId ,StoreCourseRequest $request){
         // dd($categorytID);
         $course = Course::find($courseId);
         $course->name_course =$request->name;
