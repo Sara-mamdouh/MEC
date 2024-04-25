@@ -8,14 +8,29 @@
         <label for="instructor_name" class="form-label">name</label>
         <input type="text" class="input-control" id="instructor_name" name="name" value="{{ $instructor->instructor_name}}">
       </div>
+      @error("name")
+      <div class="alert error-mess">
+        {{ $message }}    
+      </div>        
+      @enderror
       <div class="input-field">
         <label for="instructor_job" class="form-label">job</label>
         <input type="text" class="input-control" id="instructor_job" name="job" value="{{ $instructor->job}}">
       </div>
+      @error("job")
+      <div class="alert error-mess">
+        {{ $message }}    
+      </div>        
+      @enderror
       <div class="input-field">
         <label for="instructor_experience" class="form-label">experience</label>
         <input type="text" class="input-control" id="instructor_experience" name="experience" value="{{ $instructor->experience}}">
       </div>
+      @error("experience")
+      <div class="alert error-mess">
+        {{ $message }}    
+      </div>        
+      @enderror
       
       <div class="input_container">
         <input type="file" class="input-control" id="instructor_image" name="photo" style="visibility:hidden">
@@ -23,6 +38,12 @@
           Attach image
         </span>
       </div>
+      @error("photo")
+      <div class="alert error-mess">
+        {{ $message }}    
+      </div>        
+      @enderror
+
       <div class="input-field">
 
         <select id="" name="category" class="different">
@@ -35,6 +56,12 @@
 
           </select>
       </div>
+      @error("category")
+      <div class="alert error-mess">
+        {{ $message }}    
+      </div>        
+      @enderror
+
 
       <div class="btn-submit">       
         <input type="submit" value="update" name="submit">

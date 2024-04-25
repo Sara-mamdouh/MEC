@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreInstructorRequest;
 use App\Models\Instructor;
 use App\Models\Category;
 use App\Models\Course;
@@ -15,7 +16,7 @@ class InstructorController extends Controller
         $categorys = Category::all();
         return view("admin.instructor",["instructors"=>$Instructors,"categorys"=>$categorys]);
     }
-    public function store(Request $request){
+    public function store(StoreInstructorRequest $request){
         // dd($request->category);
 
         Instructor::create([
@@ -39,7 +40,7 @@ class InstructorController extends Controller
 
       return view("admin.edit_instructor",["instructor"=>$instructor,"categorys"=>$categorys]);
     }
-    public function update($instructorId ,Request $request){
+    public function update($instructorId ,StoreInstructorRequest $request){
         // dd($instructorId);
         $instructor = Instructor::find($instructorId);
         $instructor->instructor_name =$request->name;

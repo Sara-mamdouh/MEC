@@ -31,7 +31,7 @@ class StoreCourseRequest extends FormRequest
     {
         return [
             'name' => ['required'=>"please enter course name", 'string'=>"must be string", 'max'=>"must be less than 255 numbers"],
-            'topics' => ['required'=>"please enter course topics", 'numeric'=>"must be string"],
+            'topics' => ['required'=>"please enter course topics", 'string'=>"must be string"],
            
         ];
     }
