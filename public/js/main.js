@@ -1,3 +1,21 @@
+///////////////////////search
+function handleSearch(event) {
+    event.preventDefault();
+    // console.log("hh");
+}
+
+let fetchSearchResult = async (event) => {
+    const currentUrl = window.location.href;
+    // console.log(currentUrl);
+
+    let searchDate = event.target.value;
+    let response = await fetch(`${currentUrl}?q=${searchDate}`);
+    let result = await response.text();
+    // console.log(result);
+    let containerTable = document.querySelector("#ggg");
+    containerTable.innerHTML = result;
+};
+
 //////////////////////////////////////////////////// navbar for userpage
 if (document.querySelector(".navb")) {
     const menu = document.querySelector("#menu-bar");

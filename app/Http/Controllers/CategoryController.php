@@ -20,8 +20,13 @@ class CategoryController extends Controller
         $categorys = Category::latest()->filter($request->query)->paginate(6);
         $courses=Course::all();
       
+        if($request->has('q')){
+            return view("partials.adminpage._showCategory",["categorys"=>$categorys,"courses"=>$courses])->render();
+        }else{
+            return view("admin.category",["categorys"=>$categorys,"courses"=>$courses]);
+
+        }
         
-        return view("admin.category",["categorys"=>$categorys,"courses"=>$courses]);
     }
     public function store(StoreCategoryRequest $request){
 
