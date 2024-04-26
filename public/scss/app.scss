@@ -66,7 +66,7 @@ body {
             padding: 0.8rem;
             font-size: 1.3rem;
             margin: 1.3rem;
-            border: 1px solid white;
+            border: 1px solid #dbd7d7;
         }
         &:hover .nav-list__link {
             text-shadow: 2px 2px 7px #fff;
@@ -89,7 +89,7 @@ body {
 }
 #menu-bar {
     font-size: 2rem;
-    color: white;
+    color: #dbd7d7;
     cursor: pointer;
     display: none;
     @media (max-width: 992px) {
@@ -715,11 +715,11 @@ body {
             margin: 0.8rem auto;
             line-height: 50px;
             &:hover a {
-                background-color: #fff;
+                background-color: #fdfcfc;
                 color: #0505a3;
             }
             & a {
-                color: white;
+                color: #dbd7d7;
                 display: flex;
                 align-items: center;
                 text-decoration: none;
@@ -742,7 +742,7 @@ body {
             & .tooltip {
                 opacity: 0;
                 color: black;
-                background-color: #fff;
+                background-color: #fdfcfc;
                 position: absolute;
                 left: 125px;
                 top: 50%;
@@ -1134,7 +1134,7 @@ select {
     height: 300px;
     background-color: #6ba9c395;
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////(((footer)))
 
 .footer-distributed {
     background: #666;
@@ -1294,5 +1294,19 @@ select {
 
     .footer-distributed .footer-center i {
         margin-left: 0;
+    }
+}
+//////////
+.hello {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-admin {
+        & img {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
     }
 }
