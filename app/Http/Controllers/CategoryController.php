@@ -15,15 +15,11 @@ use App\Models\Cart;
 
 class CategoryController extends Controller
 {
-    public function create(){
-        $categorys = Category::latest()->paginate(6);
-
+    public function create(Request $request){
+        
+        $categorys = Category::latest()->filter($request->query)->paginate(6);
         $courses=Course::all();
-        // $category =Category::find(30);
-
-        // foreach ($category->courses as $course) {
-        //     dd($course->name_course) ;
-        // }
+      
         
         return view("admin.category",["categorys"=>$categorys,"courses"=>$courses]);
     }

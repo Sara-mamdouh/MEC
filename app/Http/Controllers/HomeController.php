@@ -86,20 +86,18 @@ class HomeController extends Controller
 
         }else{
             return redirect("login");
-
         }
     }
     public function remove_cart($id){
-
-        $diploma=Cart::find($id);
-        $diploma->delete();
-        
-        return redirect()->back();
-
        
+            $diploma=Cart::find($id);
+            $diploma->delete();
+            return redirect()->back();
+            
     }
     public function cash_booking(){
-        $user=Auth::user();
+        if(Auth::id()){
+            $user=Auth::user();
         $userId = $user->id;
         // dd($userId);
         $categorys = Cart::where("user_id","=", $userId)->get();
@@ -125,11 +123,11 @@ class HomeController extends Controller
 
         }
         return redirect()->back();
+        }else{
+            return redirect("login");
 
-
-
-
-       
+        }
+        
     }
 
     

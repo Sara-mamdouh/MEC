@@ -18,7 +18,15 @@ class Category extends Model
         'image',
         'description'
     ];
-
+    public function scopeFilter($query,$filter)
+    {
+        // dd($filter);
+        if($filter->get("q")){
+            $searchValue = $filter->get("q");
+            return $query->where("category_name","like","%$searchValue%")->orwhere("price","like","%$searchValue%");
+        }
+        
+    }
     public function courses(): BelongsToMany
     {
         return $this->belongsToMany(Course::class);
