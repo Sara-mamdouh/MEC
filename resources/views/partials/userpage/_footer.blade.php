@@ -5,18 +5,16 @@
     <h3>ME<span>C</span></h3>
 
     <p class="footer-links">
-      <a href="#" class="link-1">Home</a>
-      
-      <a href="#">Blog</a>
+      <a href="{{ route('mainhome') }}" class="link-1">Home</a>
     
-      <a href="#">courses</a>
-    
-      <a href="#">About</a>
+      <a href="{{ route('about') }}">About</a>
 
-      <a href="#">Diplomas</a>
+      <a href="#diplomas">Diplomas</a>
 
-      <a href="#">gallery</a>
+      <a href="#gallery">gallery</a>
       
+      <a href="#instructor">instructors</a>
+
     </p>
 
   </div>

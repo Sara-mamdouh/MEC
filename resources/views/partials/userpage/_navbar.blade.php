@@ -7,7 +7,7 @@
           <a class="nav-list__link active" aria-current="page" href="{{ route('mainhome') }}">home</a>
         </li>
         <li class="nav-list__item">
-          <a class="nav-list__link active" aria-current="page" href="#diplomas">courses</a>
+          <a class="nav-list__link active" aria-current="page" href="#diplomas">diplomas</a>
         </li>
         <li class="nav-list__item">
           <a class="nav-list__link active" aria-current="page" href="{{ route('about') }}">about</a>
@@ -16,7 +16,10 @@
           <a class="nav-list__link" href="#services">Services</a>
         </li>
         <li class="nav-list__item">
-          <a class="nav-list__link" aria-current="page" href="#gallery">gallery</a>
+          <a class="nav-list__link" aria-current="page" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-list__item">
+          <a class="nav-list__link" aria-current="page" href="#instructor">Instructors</a>
         </li>
         <li class="nav-list__item">
           <a class="nav-list__link" href="{{ route('show_cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
