@@ -29,6 +29,14 @@
       <span class="tooltip">instractors</span>
     </li>
     <li>
+      <a href="{{route('bookings.index')}}">
+        <i class="fa-regular fa-file-lines"></i>
+         <span class="sidebar__menu__item">booking</span>
+      </a>
+      <span class="tooltip">booking</span>
+    </li>
+    
+    <li>
       <a href="###">
         <i class="fa-solid fa-arrow-right-from-bracket"></i>
           <form action="{{route('logout')}}" method="post" class="sidebar__menu__item" >
@@ -40,6 +48,7 @@
        <span class="tooltip">logout</span>
 
     </li>
+  
   </ul>
 </aside>
 
