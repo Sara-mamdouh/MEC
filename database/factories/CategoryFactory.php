@@ -20,7 +20,7 @@ class CategoryFactory extends Factory
             "category_name"=>fake()->name(),
             "price"=>fake()->randomNumber(4, true),
             "duration"=>fake()->numberBetween(3,18 )."month",
-            "image"=>fake()->imageUrl(640, 480, 'diploma', true),
+            "image"=>fake()->image(null, 640, 480),
             "description"=>fake()->paragraph(),
         ];
     }
