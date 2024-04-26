@@ -15,8 +15,28 @@
 @include("partials.adminpage._sidebar")
 @include("partials.adminpage._addCategory")
 
-@include("partials.adminpage._showCategory")
+<section class="admin-container">
+  <div class="show-category">
+    <h2><span>c</span>ategories</h2>
 
+    <div class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="d-flex search" role="search" action="{{route("diplomas.create")}}" method="GET" onsubmit="handleSearch(event)">
+          <input class="form-control me-2" placeholder="Search" aria-label="Search" name="q" onkeydown='fetchSearchResult(event)' id="data-search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div> 
+    <div id="ggg">
+      @include("partials.adminpage._showCategory")
+
+    </div>
+
+  </div>
+  <div style="padding: 40px">
+    {{$categorys->links()}}
+  </div>
+</section>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
