@@ -31,7 +31,7 @@ Route::delete('/categories/{category}',[CategoryController::class,"destroy"])->n
 
 
 
-Route::get('/instructors/create',[InstructorController::class,"create"])->name("instructors.create");
+Route::get('/instructors',[InstructorController::class,"index"])->name("instructors.index");
 Route::get('/instructors/{instructor}/edit',[InstructorController::class,"edit"])->name("instructors.edit");
 Route::post('/instructors',[InstructorController::class,"store"])->name("instructors.store");
 Route::put('/instructors/{instructor}',[InstructorController::class,"update"])->name("instructors.update");

@@ -22,7 +22,7 @@
      
     </li>
     <li>
-      <a href="{{route('instructors.create')}}">
+      <a href="{{route('instructors.index')}}">
         <i class="fa-solid fa-users"></i>
          <span class="sidebar__menu__item">instractor</span>
       </a>

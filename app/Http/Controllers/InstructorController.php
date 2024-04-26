@@ -11,7 +11,7 @@ use App\Models\CategoryCourse;
 class InstructorController extends Controller
 {
     //
-    public function create(Request $request){
+    public function index(Request $request){
 
     
         $Instructors=Instructor::latest()->filter($request->query)->paginate(6);
@@ -36,7 +36,7 @@ class InstructorController extends Controller
             'image'=>$request->file('photo')->store('','public'),
         ]);
 
-        return to_route("instructors.create")->with("requestStatus","instructor created successfully");
+        return to_route("instructors.index")->with("requestStatus","instructor created successfully");
 
 
     }
@@ -62,13 +62,13 @@ class InstructorController extends Controller
 
         $instructor->save();
 
-        return to_route("instructors.create")->with("requestStatus","instructor updated successfully");
+        return to_route("instructors.index")->with("requestStatus","instructor updated successfully");
 
     }
     public function destroy($instructorID){
         $instructor = Instructor::find($instructorID);
         // dd($instructor);
         $instructor->delete();
-        return to_route("instructors.create");   
+        return to_route("instructors.index");   
     }
 }
