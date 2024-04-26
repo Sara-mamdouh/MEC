@@ -10,7 +10,7 @@
         </ul>
     </div>
 @endif --}}
-    <form action="{{ route('diplomas.update',$category->id) }}" method="post"  enctype="multipart/form-data">
+    <form action="{{ route('categories.update',$category->id) }}" method="post"  enctype="multipart/form-data">
       @csrf
       @method("put")
       <div class="input-field">

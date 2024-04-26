@@ -15,7 +15,7 @@ use App\Models\Cart;
 
 class CategoryController extends Controller
 {
-    public function create(Request $request){
+    public function index(Request $request){
         
         $categorys = Category::latest()->filter($request->query)->paginate(6);
         $courses=Course::all();
@@ -56,7 +56,7 @@ class CategoryController extends Controller
             );
         }
            
-        return to_route("diplomas.create")->with("requestStatus","category create successfully");
+        return to_route("categories.index")->with("requestStatus","category create successfully");
     }
    
 
@@ -96,7 +96,7 @@ class CategoryController extends Controller
             ]
             );
         }
-        return to_route("diplomas.create")->with("requestStatus","category update successfully");
+        return to_route("categories.index")->with("requestStatus","category update successfully");
 
     }
     public function destroy($categoryID){
@@ -111,7 +111,7 @@ class CategoryController extends Controller
 
 
         $category->delete();
-        return to_route("diplomas.create");
+        return to_route("categories.index");
  
     }
   

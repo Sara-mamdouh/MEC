@@ -9,7 +9,7 @@
 
   <div class="category-form ">
     <h1><span>add</span> category</h1>
-    <form action="{{ route('diplomas.store') }}" method="post"  enctype="multipart/form-data">
+    <form action="{{ route('categories.store') }}" method="post"  enctype="multipart/form-data">
       @csrf
       <div class="input-field">
         <label for="category_name" class="form-label">name</label>

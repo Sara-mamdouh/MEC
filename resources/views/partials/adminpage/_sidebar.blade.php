@@ -7,7 +7,7 @@
   </div>
   <ul class="sidebar__menu">
     <li>
-      <a href="{{route('diplomas.create')}}">
+      <a href="{{route('categories.index')}}">
         <i class="fa-solid fa-layer-group"></i>
         <span class="sidebar__menu__item">catigory</span>
       </a>

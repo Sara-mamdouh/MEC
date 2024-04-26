@@ -25,7 +25,7 @@
     <td class="action">         
       <button  type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{$category->id}}">delete</button>
 
-      <a href="{{ route("diplomas.edit",$category->id)}}" class="btn btn-outline-success">edit</a>
+      <a href="{{ route("categories.edit",$category->id)}}" class="btn btn-outline-success">edit</a>
 
     </td>
     
@@ -38,7 +38,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <form action="{{route("diplomas.destroy",$category->id)}}" method="post" style="display: inline">
+          <form action="{{route("categories.destroy",$category->id)}}" method="post" style="display: inline">
             @csrf
             @method("delete")
             <input type="submit" value="Delete" class="btn btn-danger">

@@ -21,7 +21,7 @@
 
     <div class="navbar bg-body-tertiary">
       <div class="container-fluid">
-        <form class="d-flex search" role="search" action="{{route("diplomas.create")}}" method="GET" onsubmit="handleSearch(event)">
+        <form class="d-flex search" role="search" action="{{route("categories.index")}}" method="GET" onsubmit="handleSearch(event)">
           <input class="form-control me-2" placeholder="Search" aria-label="Search" name="q" onkeydown='fetchSearchResult(event)' id="data-search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
