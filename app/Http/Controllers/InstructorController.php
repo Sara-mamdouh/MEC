@@ -11,10 +11,19 @@ use App\Models\CategoryCourse;
 class InstructorController extends Controller
 {
     //
-    public function create(){
-        $Instructors=Instructor::latest()->paginate(6);
+    public function create(Request $request){
+
+    
+        $Instructors=Instructor::latest()->filter($request->query)->paginate(6);
         $categorys = Category::all();
-        return view("admin.instructor",["instructors"=>$Instructors,"categorys"=>$categorys]);
+        if($request->has('q')){
+            return view("partials.adminpage._showInstructor",["instructors"=>$Instructors,"categorys"=>$categorys])->render();
+        }else{
+            return view("admin.instructor",["instructors"=>$Instructors,"categorys"=>$categorys]);
+
+
+        }
+
     }
     public function store(StoreInstructorRequest $request){
         // dd($request->category);

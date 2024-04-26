@@ -17,6 +17,15 @@ class Instructor extends Model
 
 
     ];
+    public function scopeFilter($query,$filter)
+    {
+        // dd($filter);
+        if($filter->get("q")){
+            $searchValue = $filter->get("q");
+            return $query->where("instructor_name","like","%$searchValue%")->orwhere("job","like","%$searchValue%");
+        }
+        
+    }
     public function category(){
 
         return $this->belongsTo(Category::class);

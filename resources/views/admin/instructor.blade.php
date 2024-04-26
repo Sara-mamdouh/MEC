@@ -15,9 +15,28 @@
 
 @include("partials.adminpage._addInstructor")
 
-@include("partials.adminpage._showInstructor")
 
+<section class="admin-container">
+  <div class="show-category">
+    <h2><span>I</span>nstructors</h2>
+    <div class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="d-flex search" role="search" action="{{route("courses.create")}}" method="GET" onsubmit="handleSearch(event)">
+          <input class="form-control me-2" placeholder="Search" aria-label="Search" name="q" onkeydown='fetchSearchResult(event)' id="data-search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div> 
+    <div class="table-container">
 
+      @include("partials.adminpage._showInstructor")
+
+    </div>
+  </div>
+  <div style="padding: 40px">
+    {{$instructors->links()}}
+  </div>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="//unpkg.com/alpinejs" defer></script>
