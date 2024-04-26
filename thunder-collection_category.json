@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "category",
+    "collectionId": "6559ae3d-c243-47c4-9624-c786283913be",
+    "dateExported": "2024-04-26T23:56:49.734Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "25f56abe-5c32-4c49-a2c7-3ab7d8812238",
+            "colId": "6559ae3d-c243-47c4-9624-c786283913be",
+            "containerId": "",
+            "name": "getCategories",
+            "url": "http://127.0.0.1:8000/api/categories",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-26T23:48:36.296Z",
+            "modified": "2024-04-26T23:48:59.112Z",
+            "headers": []
+        },
+        {
+            "_id": "364c84b7-826b-42af-a4e2-9acde88732a4",
+            "colId": "6559ae3d-c243-47c4-9624-c786283913be",
+            "containerId": "",
+            "name": "createCategory",
+            "url": "http://127.0.0.1:8000/api/categories",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-26T23:50:15.861Z",
+            "modified": "2024-04-26T23:50:57.572Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"category_name\" :\"categoryh new\",\n    \"price\" :1111,\n    \"duration\":\"3 year\",\n    \"image\":\"jnjnj.jpg\",\n    \"description\":\"mmvofikm mfmfkm fmfoi\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b6c56eb9-61e4-4840-af38-4ef63172b10a",
+            "colId": "6559ae3d-c243-47c4-9624-c786283913be",
+            "containerId": "",
+            "name": "updateCategory",
+            "url": "http://127.0.0.1:8000/api/categories/12",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-04-26T23:51:44.855Z",
+            "modified": "2024-04-26T23:56:23.696Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"category_name\" :\"categoryh updated\",\n    \"price\" :4444,\n    \"duration\":\"3 year\",\n    \"image\":\"jnjnj.jpg\",\n    \"description\":\"mmvofikm mfmfkm fmfoi\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "66c37d4e-4fca-4b92-bd7d-840c766f4846",
+            "colId": "6559ae3d-c243-47c4-9624-c786283913be",
+            "containerId": "",
+            "name": "getOneCategory",
+            "url": "http://127.0.0.1:8000/api/categories/7",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-04-26T23:54:28.982Z",
+            "modified": "2024-04-26T23:55:03.463Z",
+            "headers": []
+        },
+        {
+            "_id": "23322214-6096-493f-9269-8f26c0381045",
+            "colId": "6559ae3d-c243-47c4-9624-c786283913be",
+            "containerId": "",
+            "name": "deleteCategory",
+            "url": "http://127.0.0.1:8000/api/categories/11",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-04-26T23:55:35.750Z",
+            "modified": "2024-04-26T23:55:53.899Z",
+            "headers": []
+        }
+    ],
+    "ref": "cdxLtQE5EAbENkCg0B1j0J88gXioUuvgdqDsEyDk3sd_jBnSon9f_usvqcst08w7drU-dC3_4nT08HCi-d4l6g"
+}
