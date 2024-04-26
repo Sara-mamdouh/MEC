@@ -18,7 +18,6 @@ Route::get('/user/show_cart',[HomeController::class,"show_cart"])->name('show_ca
 Route::delete('/user/remove_cart/{diploma}',[HomeController::class,"remove_cart"])->name('remove_cart');
 Route::get('/user/cash_booking',[HomeController::class,"cash_booking"])->name('cash_booking');
 
-Route::get('/diplomas/{diploma}',[HomeController::class,"show"])->name("diplomas.show");
 
 
 Route::get('/diplomas/create',[CategoryController::class,"create"])->name("diplomas.create");
@@ -27,6 +26,7 @@ Route::get('/diplomas/{diploma}/edit',[CategoryController::class,"edit"])->name(
 Route::put('/diplomas/{diploma}',[CategoryController::class,"update"])->name("diplomas.update");
 Route::delete('/diplomas/{diploma}',[CategoryController::class,"destroy"])->name("diplomas.destroy");
 
+Route::get('/diplomas/{diploma}',[HomeController::class,"show"])->name("diplomas.show");
 
 
 Route::get('/instructors/create',[InstructorController::class,"create"])->name("instructors.create");
