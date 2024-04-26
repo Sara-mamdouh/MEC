@@ -15,7 +15,31 @@
 @include("partials.adminpage._sidebar")
 @include("partials.adminpage._addCourses")
 
-@include("partials.adminpage._showCourses")
+
+<section class="admin-container">
+  <div class="show-category">
+    <h2><span>c</span>ourses</h2>
+    <div class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <form class="d-flex search" role="search" action="{{route("courses.create")}}" method="GET" onsubmit="handleSearch(event)">
+          <input class="form-control me-2" placeholder="Search" aria-label="Search" name="q" onkeydown='fetchSearchResult(event)' id="data-search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div> 
+    <div class="table-container">
+
+      @include("partials.adminpage._showCourses")
+
+    </div>
+  </div>
+  <div style="padding: 40px">
+    {{$courses->links()}}
+  </div>
+</section>
+
+
+
 
 
 

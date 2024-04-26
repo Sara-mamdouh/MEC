@@ -14,6 +14,15 @@ class Course extends Model
         'name_course',
         'topics' 
     ];
+    public function scopeFilter($query,$filter)
+    {
+        // dd($filter);
+        if($filter->get("q")){
+            $searchValue = $filter->get("q");
+            return $query->where("name_course","like","%$searchValue%")->orwhere("topics","like","%$searchValue%");
+        }
+        
+    }
     public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class);

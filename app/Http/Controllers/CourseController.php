@@ -11,10 +11,17 @@ use App\Http\Requests\StoreCourseRequest;
 class CourseController extends Controller
 {
     //
-    public function create(){
-        $Courses = Course::latest()->paginate(6);
+    public function create(Request $request){
       
-        return view("admin.course",["courses"=>$Courses]);
+        $Courses = Course::latest()->filter($request->query)->paginate(6);
+        if($request->has('q')){
+            return view("partials.adminpage._showCourses",["courses"=>$Courses])->render();
+        }else{
+            return view("admin.course",["courses"=>$Courses]);
+
+
+        }
+      
     }
     public function store(StoreCourseRequest $request){
         // dd($request->all());
