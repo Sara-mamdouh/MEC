@@ -27,9 +27,8 @@
         </form>
       </div>
     </div> 
-    <div id="ggg">
+    <div class="table-container">
       @include("partials.adminpage._showCategory")
-
     </div>
 
   </div>

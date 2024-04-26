@@ -11,8 +11,8 @@ let fetchSearchResult = async (event) => {
     let searchDate = event.target.value;
     let response = await fetch(`${currentUrl}?q=${searchDate}`);
     let result = await response.text();
-    // console.log(result);
-    let containerTable = document.querySelector("#ggg");
+    console.log(result);
+    let containerTable = document.querySelector(".table-container");
     containerTable.innerHTML = result;
 };
 
