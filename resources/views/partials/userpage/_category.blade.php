@@ -19,7 +19,7 @@
           <h5 class="card__body__title">{{$category->category_name}}</h5>
           <p class="card__body__text">{{$category->description}}</p>
           <a class="card__body__link"
-          href="{{route("diplomas.show",$category->id)}}"> read more</a>
+          href="{{route("categories.show",$category->id)}}"> read more</a>
         </div>
       </div>
       @endforeach
