@@ -6,6 +6,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\BookingController;
+
 // use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 
@@ -42,6 +44,8 @@ Route::get('/courses/{course}/edit',[CourseController::class,"edit"])->name("cou
 Route::put('/courses/{course}',[CourseController::class,"update"])->name("courses.update");
 Route::delete('/courses/{course}',[CourseController::class,"destroy"])->name("courses.destroy");
 
+Route::get('/bookings',[BookingController::class,"index"])->name("bookings.index");
+Route::delete('/bookings/{booking}',[BookingController::class,"destroy"])->name("bookings.destroy");
 
 
 Route::middleware('auth')->group(function () {

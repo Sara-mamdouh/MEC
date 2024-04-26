@@ -6,12 +6,12 @@ function handleSearch(event) {
 
 let fetchSearchResult = async (event) => {
     const currentUrl = window.location.href;
-    // console.log(currentUrl);
 
     let searchDate = event.target.value;
+    // console.log(searchDate);
     let response = await fetch(`${currentUrl}?q=${searchDate}`);
     let result = await response.text();
-    console.log(result);
+    // console.log(response);
     let containerTable = document.querySelector(".table-container");
     containerTable.innerHTML = result;
 };
