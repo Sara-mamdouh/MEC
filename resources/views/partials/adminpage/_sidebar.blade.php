@@ -14,7 +14,7 @@
       <span class="tooltip">catigory</span>
     </li>
     <li class="kk">
-      <a href="{{route('courses.create')}}">
+      <a href="{{route('courses.index')}}">
         <i class="fa-solid fa-laptop"></i>
         <span class="sidebar__menu__item">courses</span>
       </a>

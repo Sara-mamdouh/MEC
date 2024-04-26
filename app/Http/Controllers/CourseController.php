@@ -11,7 +11,7 @@ use App\Http\Requests\StoreCourseRequest;
 class CourseController extends Controller
 {
     //
-    public function create(Request $request){
+    public function index(Request $request){
       
         $Courses = Course::latest()->filter($request->query)->paginate(6);
         if($request->has('q')){
@@ -35,7 +35,7 @@ class CourseController extends Controller
         );
      
 
-        return to_route("courses.create")->with("requestStatus","course create successfully");
+        return to_route("courses.index")->with("requestStatus","course create successfully");
     }
     public function edit($courseId){
         // dd($categoryId);
@@ -54,7 +54,7 @@ class CourseController extends Controller
         $course->topics =$request->topics;
 
         $course->save();
-        return to_route("courses.create")->with("requestStatus","course update successfully");
+        return to_route("courses.index")->with("requestStatus","course update successfully");
 
     }
     
@@ -64,7 +64,7 @@ class CourseController extends Controller
         $courseID->categories()->detach();
 
         $courseID->delete();
-        return to_route("courses.create");
+        return to_route("courses.index");
 
         
     }
