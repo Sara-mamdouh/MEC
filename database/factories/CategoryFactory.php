@@ -15,7 +15,7 @@ class CategoryFactory extends Factory
      * @return array<string, mixed>
      */
     public function definition(): array
-    {
+    {   
         return [
             "category_name"=>fake()->name(),
             "price"=>fake()->randomNumber(4, true),
