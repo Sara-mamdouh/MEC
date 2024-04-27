@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "course",
+    "collectionId": "95b4f012-e48b-4a2d-9d64-cf3384e38ffb",
+    "dateExported": "2024-04-27T00:24:11.974Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "b198fa6c-d808-48a4-afc8-64b4d160ec5c",
+            "colId": "95b4f012-e48b-4a2d-9d64-cf3384e38ffb",
+            "containerId": "",
+            "name": "getCourses",
+            "url": "http://127.0.0.1:8000/api/courses",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-04-27T00:12:01.724Z",
+            "modified": "2024-04-27T00:12:17.733Z",
+            "headers": []
+        },
+        {
+            "_id": "0fc48453-43c7-4ddc-87ce-cc9a11e59ea8",
+            "colId": "95b4f012-e48b-4a2d-9d64-cf3384e38ffb",
+            "containerId": "",
+            "name": "createCourse",
+            "url": "http://127.0.0.1:8000/api/courses",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-04-27T00:13:52.956Z",
+            "modified": "2024-04-27T00:14:53.562Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name_course\": \"Anita test\",\n  \"topics\": \"Prof. Rhiannon Howe test\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c78e36f5-7ff6-4411-83b9-4f047912fb6b",
+            "colId": "95b4f012-e48b-4a2d-9d64-cf3384e38ffb",
+            "containerId": "",
+            "name": "getOneCourse",
+            "url": "http://127.0.0.1:8000/api/courses/70",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-04-27T00:17:09.114Z",
+            "modified": "2024-04-27T00:17:30.943Z",
+            "headers": []
+        },
+        {
+            "_id": "c6a89b98-5589-4755-a5af-29ad472b1e35",
+            "colId": "95b4f012-e48b-4a2d-9d64-cf3384e38ffb",
+            "containerId": "",
+            "name": "updateCourse",
+            "url": "http://127.0.0.1:8000/api/courses/50",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-04-27T00:19:08.077Z",
+            "modified": "2024-04-27T00:20:00.815Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name_course\": \"Anita test update\",\n  \"topics\": \"Prof. Rhiannon Howe test\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "84f258db-4538-4f12-ae5f-1deea9d46e19",
+            "colId": "95b4f012-e48b-4a2d-9d64-cf3384e38ffb",
+            "containerId": "",
+            "name": "deleteCourse",
+            "url": "http://127.0.0.1:8000/api/courses/51",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-04-27T00:23:42.876Z",
+            "modified": "2024-04-27T00:24:01.427Z",
+            "headers": []
+        }
+    ],
+    "ref": "ujFyS-ZQkOlgmPYl-PCG3I_wx9DGnw6pu049k9klh8-4IxeM9BhkfrKK6oMhRBROXfVTi_VYGwLq0mDsLp5zrg"
+}
