@@ -23,14 +23,14 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        $newCategory = Course::create([
+        $newCourse = Course::create([
             "name_course"=>$request->input('name_course'),
             "topics"=>$request->input('topics'),
 
         ]);
         $res =[
             "message" => "Course created successfully",
-            "data"=>$newCategory
+            "data"=>$newCourse
         ];
         return response()->json($res , 201);
     }

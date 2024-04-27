@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "instructor",
+    "collectionId": "1ac7962a-6a5d-451b-91a5-eebc09d4ec37",
+    "dateExported": "2024-04-27T00:49:14.718Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e186f982-20b1-4e09-a7f5-52b130738cad",
+            "colId": "1ac7962a-6a5d-451b-91a5-eebc09d4ec37",
+            "containerId": "",
+            "name": "getinstructors",
+            "url": "http://127.0.0.1:8000/api/instructors",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-27T00:33:00.798Z",
+            "modified": "2024-04-27T00:33:39.777Z",
+            "headers": []
+        },
+        {
+            "_id": "393ed5d0-2216-4199-bfc1-ce99004f082c",
+            "colId": "1ac7962a-6a5d-451b-91a5-eebc09d4ec37",
+            "containerId": "",
+            "name": "createInstructor",
+            "url": "http://127.0.0.1:8000/api/instructors",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-04-27T00:37:21.231Z",
+            "modified": "2024-04-27T00:39:26.876Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"instructor_name\": \"Ms. Bessie create test\",\n      \"job\": \"Marley Jacobs\",\n      \"experience\": \"5years\",\n      \"image\": \"njnhbgvfcrvtbynumi.jpg\",\n      \"category_id\": 7\n  \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "dfec14f9-36ea-4f94-a38a-ec3222987e17",
+            "colId": "1ac7962a-6a5d-451b-91a5-eebc09d4ec37",
+            "containerId": "",
+            "name": "getOneInstructor",
+            "url": "http://127.0.0.1:8000/api/instructors/2",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-04-27T00:43:28.259Z",
+            "modified": "2024-04-27T00:44:02.221Z",
+            "headers": []
+        },
+        {
+            "_id": "052309f9-4e9b-4f00-add0-4885bfb87886",
+            "colId": "1ac7962a-6a5d-451b-91a5-eebc09d4ec37",
+            "containerId": "",
+            "name": "updateInstructor",
+            "url": "http://127.0.0.1:8000/api/instructors/2",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-04-27T00:46:37.190Z",
+            "modified": "2024-04-27T00:47:53.017Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \n  \"instructor_name\": \"Ms. Bessie update\",\n  \"job\": \"Marley Jacobs\",\n  \"experience\": \"5years\",\n  \"image\": \"https://via.placeholder.com/640x480.png/002200?text=instructor+qui\",\n  \"category_id\": 7\n     \n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8033d11d-9bdc-4e1d-9dad-f578ed25743a",
+            "colId": "1ac7962a-6a5d-451b-91a5-eebc09d4ec37",
+            "containerId": "",
+            "name": "deleteInstructor",
+            "url": "http://127.0.0.1:8000/api/instructors/2",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-04-27T00:48:49.613Z",
+            "modified": "2024-04-27T00:49:00.215Z",
+            "headers": []
+        }
+    ],
+    "ref": "30d8c9S4tJF_D4St-Abyn5jkvegU2sMkfeZ_yXKr16RSBnyUzkaACS7HE9sHeOPeAFou5W8aVhz5jLp4E0eRmg"
+}
