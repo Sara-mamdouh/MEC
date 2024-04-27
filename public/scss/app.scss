@@ -321,7 +321,7 @@ body {
         padding: 40px 0;
         display: grid;
         gap: 30px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 25% 25% 25% 25%;
         @media (max-width: 1200px) {
             grid-template-columns: 1fr 1fr 1fr;
         }
