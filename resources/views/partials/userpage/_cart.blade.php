@@ -53,7 +53,7 @@
         proceed  booking
       </h3>
       <a href="{{route("cash_booking")}}" class="btn btn-danger">Payment upon attendance</a>
-      <a href="" class="btn btn-danger">Pay using card</a>
+      <a href="{{route("payment_online")}}" class="btn btn-danger">Pay using card</a>
 
     </div>
   </div>

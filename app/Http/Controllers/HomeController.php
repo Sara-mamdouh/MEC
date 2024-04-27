@@ -129,6 +129,40 @@ class HomeController extends Controller
         }
         
     }
+    public function payment_online(){
+        if(Auth::id()){
+            $user=Auth::user();
+        $userId = $user->id;
+        // dd($userId);
+        $categorys = Cart::where("user_id","=", $userId)->get();
+        // dd($categorys);
+        foreach($categorys as $category){
+            $booking = new Booking();
+            $booking->name_user= $category->name_user;
+            $booking->email= $category->email;
+            $booking->phone= $category->phone;
+            $booking->user_type= $category->user_type;
+            $booking->user_id= $category->user_id;
+            $booking->category_id= $category->category_id;
+            $booking->category_name= $category->category_name;
+            $booking->category_price= $category->category_price;
+
+            $booking->payment_status= "The payment was made";
+            $booking->booking_status= "done";
+            $booking->save();
+            $cart_id=$category->id;
+            $cart=Cart::find($cart_id);
+            $cart->delete();
+
+
+        }
+        return redirect()->back();
+        }else{
+            return redirect("login");
+
+        }
+        
+    }
 
     
 }
