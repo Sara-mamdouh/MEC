@@ -16,7 +16,7 @@
     <td> {{$instructor->instructor_name}}</td>
     <td> {{$instructor->job}}</td>
     <td> {{$instructor->experience}}</td>
-    <td> <img src="{{asset("{$instructor->image}")}}" alt="" /></td>
+    <td> <img src="{{asset("storage/{$instructor->image}")}}" alt="" /></td>
 
     <td> {{$instructor->category ? $instructor->category->category_name:"noExist"}}</td>
 

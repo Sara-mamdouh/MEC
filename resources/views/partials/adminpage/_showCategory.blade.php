@@ -15,7 +15,7 @@
     <td> {{$category->category_name}}</td>
       <td> {{$category->price}}</td>
     <td> {{$category->duration}}</td>
-    <td> <img src="{{asset("{$category->image}")}}" alt="" /></td>
+    <td> <img src="{{asset("storage/{$category->image}")}}" alt="" /></td>
     <td> 
       @foreach($category->courses as $course)
       <span>{{ $course->name_course }} /</span>

@@ -11,7 +11,7 @@
         <li >
           <div class="instructors__card">
             <div class="instructors__card__img">
-              <img src="{{asset("{$instructor->image}")}}" alt="" />
+              <img src="{{asset("storage/{$instructor->image}")}}" alt="" />
             </div>
             <div class="instructors__card__dec">
               <h4>{{$instructor->instructor_name}}</h4>

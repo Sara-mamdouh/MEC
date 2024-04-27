@@ -24,7 +24,7 @@ class InstructorFactory extends Factory
             "instructor_name"=>fake()->name(),
             "job"=>fake()->name(),
             "experience"=>fake()->numberBetween(1,10)."years",
-            "image"=>fake()->imageUrl(640, 480, 'instructor', true),
+            "image"=>fake()->image(null, 640, 480),
             "category_id"=>fake()->randomElement($categoryIDs),
 
         ];
